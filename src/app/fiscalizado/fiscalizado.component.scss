@@ -1,0 +1,21 @@
+.container_inputs_fields{
+	width: 97%;
+}
+
+@media (max-width: 1000px) {
+	.container_inputs_fields > div {
+		flex-wrap: wrap;
+	}
+	.u{
+		display: flex !important;
+		justify-content: center !important;
+	}
+	.u > div {
+		flex-wrap: wrap;
+		width: 100% !important;
+	}
+	.u mat-form-field{
+		width: 100% !important;
+	}
+}
+

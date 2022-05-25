@@ -1,0 +1,82 @@
+<form [formGroup]="appForm" name="myForm" class="example-form">
+  <div class="container_inputs">
+    <div class="u" style="display: flex;align-items: center;justify-content: space-between;">
+      <mat-form-field appearance="fill" class="inputFieldMin" style="width: 50%;">
+        <mat-label>Número de Masp</mat-label>
+        <input (blur)="onBlur3()" formControlName="numeromasp" id="numeromasp" type="text" autocomplete="off"
+          matInput #postalCode maxlength="50" required>
+        <mat-hint></mat-hint>
+        <mat-error *ngIf="numeromasp?.hasError('required')">Campo Obrigatório</mat-error>
+      </mat-form-field>
+      <div class="u" style="width: 50%;display: flex;align-items: center;justify-content: flex-end;">
+        <mat-form-field appearance="fill" class="inputFieldMed mat-form-field-disabled"  style="width: 50%">
+          <mat-label>Nome</mat-label>
+          <input formControlName="nome" [disabled]="true" type="text"  id="nome" matInput placeholder="100 " matInput
+            placeholder=" " matInput name="" required>
+          <mat-hint></mat-hint>
+        <mat-error *ngIf="nome?.hasError('required')">Campo Obrigatório</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="inputFieldMed" style="width: 50%">
+          <mat-label>Cargo</mat-label>
+          <mat-select formControlName="cargo">
+            <mat-option *ngFor="let food of foods" [value]="food.value">
+              {{food.viewValue}}
+            </mat-option>
+          </mat-select>
+        <mat-error *ngIf="cargo?.hasError('required')">Campo Obrigatório</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="u" style="display: flex;align-items: center;justify-content: space-between;">
+      <mat-form-field appearance="fill" class="inputFieldMin" style="width: 50%;">
+        <mat-label>Responsável ou Representante Legal</mat-label>
+        <input formControlName="responsavel" type="text" class="form-control" id="nome1" matInput maxlength="100"
+           name="nome1" required>
+        <mat-icon matSuffix></mat-icon>
+        <mat-hint></mat-hint>
+        <mat-error *ngIf="responsavel?.hasError('required')">Campo Obrigatório</mat-error>
+      </mat-form-field>
+      <div style="width: 50%;display: flex;align-items: center;justify-content: flex-end;">
+        <mat-form-field appearance="fill" class="inputFieldMin" style="width: 100%;">
+          <mat-label>Identidade</mat-label>
+          <input formControlName="identidade" type="number" name="identidade" id="identidade" matInput placeholder="Ex">
+          <mat-hint></mat-hint>
+        <mat-error *ngIf="identidade?.hasError('required')">Campo Obrigatório</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+    <div>
+			<mat-checkbox formControlName="assinado" style="margin-left: 15px; font-size: 12px;" color="primary"> <span class="check_text">Não Assinado</span></mat-checkbox>
+    </div>
+    <div *ngIf="isChecked">
+      <section class="wrapper_testemunhas">
+        <main class="container_input_testemunha u" *ngFor="let testemunhas1 of numeroDeTestemunhas , let i = index">
+          <mat-form-field appearance="fill" class="inputFieldMin" style="width: 50%;">
+            <mat-label>Testemunha</mat-label>
+            <input [formControl]="testemunhas1.nome" type="text" name="" id="" matInput
+              placeholder="Ex">
+            <mat-icon matSuffix></mat-icon>
+            <mat-hint></mat-hint>
+        <mat-error *ngIf="testemunhas1.nome.invalid">Campo Obrigatório</mat-error>
+          </mat-form-field>
+          <div style="width: 50%;display: flex;align-items: center;justify-content: flex-end;">
+            <mat-form-field appearance="fill" class="inputFieldMin" style="width: 100%;">
+              <mat-label>Identidade</mat-label>
+              <input [formControl]="testemunhas1.identidade" type="number" name="" id="" matInput
+                placeholder="Ex">
+              <mat-hint></mat-hint>
+        <mat-error *ngIf="testemunhas1.identidade.invalid">Campo Obrigatório</mat-error>
+            </mat-form-field>
+            <mat-icon (click)="apagarTestemunha(testemunhas1)"  *ngIf="i == ultimoIndex && i != 0 " class="icon">close</mat-icon>
+            <mat-icon (click)="novaTestemunha()"  *ngIf="i == ultimoIndex" class="icon">add</mat-icon>
+          </div>
+        </main>
+      </section>
+    </div>
+  </div>
+</form>
+    <hr>
+    <div style="display: flex; justify-content: flex-end;">
+      <button mat-flat-button color="primary"   (click)="storeClient()" class="button">Salvar</button>
+      <button mat-flat-button color="primary"    (click)="storeData()" class="button" style="margin-right: 0px;">Finalizar</button>
+    </div>

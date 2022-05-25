@@ -1,0 +1,62 @@
+
+.mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+    
+  }
+  
+  .input.ng-dirty.ng-invalid {
+    border: 1px solid red;
+  }
+  .input-padrao {
+    display: block;
+    margin: 0 0 20px;
+    width: 50%;
+    padding: 10px;
+  }
+
+  .example-form {
+    width: 100%;
+  }
+  
+  
+  .example-full-width {
+    width: 100%;
+    
+  }
+  
+  td {
+    padding-right: 8px;
+  }
+  
+
+  mat-form-field{
+    margin: 10px;
+  } 
+form label {
+  display:block;
+  font-size: 20px;
+  margin: 20px 0 10px;
+  font-family: 'Gotu', sans-serif;
+  font-weight: bold;
+}
+
+.toolbar-flex{
+  display: flex;
+  justify-content:justify;
+  }
+
+  .text-input{
+    width:300px
+  }
+  
+  .fieldset
+{
+  width:1300px;
+  height:100px;
+}
+
+.fieldset2
+{
+  width:1385px;
+  height:100px;
+}

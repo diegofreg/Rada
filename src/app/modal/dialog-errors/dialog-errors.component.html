@@ -1,0 +1,30 @@
+<p style="font-size: 20px;">Há campos para serem preenchidos</p>
+<ul>
+	<li *ngFor="let  obj of data" style="margin-bottom: 15px;">
+	<span style="font-weight: bold;">{{obj.aba}}</span> 
+			<ol style="display: flex;" *ngFor="let campos of obj.campos"> 
+			<span style="margin-right: 5px;">	preencha o campo </span>
+				<div [ngSwitch]="campos">
+					
+			 <span  *ngSwitchCase="'nomeprodutor'" style="color: red;">Nome do produtor</span>	
+			 <span  *ngSwitchCase="'numerodolacre'" style="color: red;">Número do lacre</span>
+			 <span  *ngSwitchCase="'numeromasp'" style="color: red;">Número do masp</span>
+			 <span  *ngSwitchCase="'cultura'" style="color: red;">Cultura</span>
+			 <span  *ngSwitchCase="'cep'" style="color: red;">Cep</span>
+			 <span  *ngSwitchCase="'cargo'" style="color: red;">Cargo</span>
+			 <span  *ngSwitchCase="'responsavel'" style="color: red;">Responsável</span>
+			 <span  *ngSwitchCase="'identidade'" style="color: red;">Identidade</span>
+			 <span  *ngSwitchCase="'numerocoleta'" style="color: red;">Número de coleta</span>
+			 <span  *ngSwitchCase="'data'" style="color: red;">Data</span>
+			 <span  *ngSwitchCase="'horas'" style="color: red;">Horas</span>
+			 <span  *ngSwitchCase="'acao'" style="color: red;">Ação</span>
+			 <span  *ngSwitchCase="'local'" style="color: red;">Local</span>
+			 <span  *ngSwitchDefault style="color: red;">{{campos}}</span>
+			
+			</div>
+			</ol>
+	</li>
+	<p style="margin-top: 20px">
+	Depois de preencher , certifique de clicar em <span style="font-weight: bold;font-size: 17px">salvar</span>
+	</p>
+</ul>

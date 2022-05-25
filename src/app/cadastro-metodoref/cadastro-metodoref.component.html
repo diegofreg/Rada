@@ -1,0 +1,40 @@
+<form [formGroup]="form" name="myForm" class="example-form breakpoint">
+    <div class="container_inputs" >
+    
+    
+     <div class="div100">
+        <div class="div30">
+            <mat-form-field appearance="fill" style="width: 100%;">
+                   <mat-label>Método de Referência</mat-label>
+                   <textarea matInput formControlName="nome"></textarea>
+            </mat-form-field>
+       </div>
+
+       <div class="div30">
+         <mat-form-field appearance="fill" style="width:100%">
+            <mat-label>Descrição</mat-label>
+            <textarea matInput formControlName="descricao"></textarea>
+         </mat-form-field>
+        </div>
+     
+        <div class="div30">
+
+            <div style="display: block">
+                <p style="margin-left:25px">Situação</p>
+                <div style="display: flex;align-items: center;">
+                    <mat-radio-group formControlName="situacao" aria-label="Selecione uma opção" class="padding-bottom-20" style="width: 30%;margin: 10px 0px 10px 15px; padding: 1%;" >
+                        <mat-radio-button value="true" class="padding-rigth-">Ativo</mat-radio-button>
+                      <div class="radio">
+                        <mat-radio-button value="false" checked>Inativo</mat-radio-button>
+                      </div>
+                    </mat-radio-group>
+                </div>
+          </div>
+        </div>
+     </div>
+    </div>
+</form>
+    <hr>
+    <div style="display: flex; justify-content: flex-end;">
+        <button mat-flat-button color="primary" class="button" type="button" style="margin: 20px 0px ;" (click)="storeData()">Salvar</button>
+    </div>

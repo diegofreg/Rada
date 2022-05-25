@@ -1,0 +1,44 @@
+input[type=time]::-webkit-datetime-edit-hour-field {
+  background-color: #f2f4f5;
+  border-radius: 15%;
+  padding: 19px 13px;
+}
+
+.mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+    
+  }
+  
+  .input.ng-dirty.ng-invalid {
+    border: 1px solid red;
+  }
+
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    
+  }
+  
+  .example-full-width {
+    width: 100%;
+    
+  }
+  
+  td {
+    padding-right: 8px;
+  }
+  
+
+  ::ng-deep body {
+    background-color: rgb(248, 250, 250);
+}
+.formulario {
+  background: linear-gradient(#fffdfd,#eaf3f7);
+}
+
+.fieldset
+{
+  width:1300px;
+  height:100px;
+}
