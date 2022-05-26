@@ -1,7 +1,0 @@
-{
-  "/rada-laboratorios/*": {
-    "target": "http://localhost:800",
-    "secure": false,
-    "logLevel": "debug"
-  }
-}
