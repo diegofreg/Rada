@@ -1,0 +1,308 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$primary: mat-palette($mat-blue);
+$accent: mat-palette($mat-pink, A200, A100, A400);
+$warn: mat-palette($mat-red);
+$theme: mat-light-theme($primary, $accent, $warn);
+@include angular-material-theme($theme);
+
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.dark-theme {
+		height: 100%;
+    color: $light-primary-text;
+		background-color: #424242;
+    $dark-primary: mat-palette($mat-yellow);
+    $dark-accent: mat-palette($mat-amber, A400, A100, A700);
+    $dark-warn: mat-palette($mat-red);
+    $dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+
+		@include angular-material-theme($dark-theme);
+}
+
+// .x{
+// overflow-y: auto;
+// height: 100%;
+
+
+// }
+  .select select {
+    height: 10px;
+}
+
+body {
+  overflow-x:hidden;
+  overflow-y: hidden;
+}
+
+.radios {
+  font-size: 10pt;
+  margin-left: 16px;
+  flex-direction: column-reverse
+    
+  }
+  
+  .input.ng-dirty.ng-invalid {
+    border: 1px solid red;
+  }
+  .input-padrao {
+    display: block;
+    margin: 0 0 20px;
+    width: 50%;
+    padding: 10px;
+  }
+
+  .example-form1 {
+		height:700px;
+    width: 200%;
+}
+
+  .example-form2 {
+		height:100%;
+    width: 100%;
+		overflow-y: hidden;
+  }
+
+  .example-form {
+		height:300px;
+    width: 100%;
+		overflow-y: auto;
+    @media screen and (max-width:1600px){
+      height:230px;
+    }
+    @media screen and (max-width:1366px){
+      height:170px;
+    }
+    @media screen and (max-width:1280px){
+      height:180px;
+    }
+    @media screen and (max-width:900px){
+      height:170px;
+    }
+  }
+  
+  .example-full-width {
+    width: 100%;
+    
+  }
+  
+  td {
+    padding-right: 8px;
+  }
+  
+
+  .mat-form-field-fiscalizado {
+    margin: 15px;
+  }
+
+
+form label {
+  display:block;
+  font-size: 20px;
+  margin: 20px 0 10px;
+  font-family: 'Gotu', sans-serif;
+  font-weight: bold;
+}
+
+.toolbar-flex{
+  display: flex;
+  justify-content:justify;
+  }
+
+  .text-input{
+    width:300px
+  }
+  
+  .fieldset
+{
+  width:1300px;
+  height:100px;
+}
+
+.fieldset2
+{
+  width:1385px;
+  height:100px;
+}
+.sizes {
+  .p-inputtext {
+      display: block;
+      margin-bottom: .5rem;
+
+      &:last-child {
+          margin-bottom: 0;
+      }
+  }
+}
+
+.field * {
+  display: block;
+}
+
+.inputFieldMax{
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  
+}
+.inputFieldMed{
+  min-width: 100;
+  max-width: 150;
+  width: 100%;
+  
+}
+
+.inputFieldMin{
+  min-width: 30;
+  max-width: 100;
+  width: 100%;
+  
+}
+
+.div10{
+  display: inline-block;
+  width: 9%;
+  padding: 0.5%;
+   
+}
+.div20{
+  display: inline-block;
+  width: 19%;
+  padding: 0.5%;
+}
+.div30{
+  display: inline-block;
+  width: 29%;
+  padding: 0.5%;
+}
+.div40{
+  display: inline-block;
+  width: 39%;
+  padding: 0.5%;
+}
+.div50{
+  display: inline-block;
+  width: 49%;
+  padding: 0.5%;
+}
+.div60{
+  display: inline-block;
+  width: 59%;
+  padding: 0.5%;
+}
+.div70{
+  display: inline-block;
+  width: 69%;
+  padding: 0.5%;
+}
+.div80{
+  display: inline-block;
+  width: 79%;
+  padding: 0.5%;
+}
+.div90{
+  display: inline-block;
+  width: 89%;
+  padding: 0.5%;
+}
+.div100{
+  display: inline-block;
+  width: 99%;
+  padding: 0.5%;
+}
+
+.div10Left{
+  display: inline-block;
+  width: 9%;
+  padding: 0.5%;
+  margin-left: auto;
+   
+}
+
+.div100Sp{
+  display: inline-block;
+  width: 99%;
+  padding: 0px;
+}
+
+
+
+.center {
+  margin: 0px;
+  width: 90%;
+  padding:2px;
+  text-align: center;
+  font-size: 12pt
+}
+.radioLabel{
+  display: contents;
+  text-align: left;
+  padding-top: 0px;
+  font-size: 8pt;
+  color: gray;
+  
+}
+.mat-radio-group{
+  display:flex ;
+  width:100%;
+  font-size:0.4em;
+  
+}
+
+.mat-radio-label-content{
+  font-size: 10pt;
+  text-align: left;
+}
+
+.icon {
+  padding-bottom: 1.34375em;
+  margin-bottom: 15px;
+}
+.mat-expansion-panel-body{
+	padding: 0px !important;
+}
+.mat-expansion-panel-header{
+	font-weight: bold;
+	padding: 0px !important;
+}
+.mat-expansion-panel:not([class*="mat-elevation-z"]){
+	box-shadow: 0px 0px 1px -2px rgba(0, 0, 0, 0), 0px 2px 2px 0px rgba(0, 0, 0, 0), 0px 1px 5px 0px rgba(0, 0, 0, 0) !important }
+
+.mat-tab-header{
+	height: 49px !important;
+}
+.mat-tab-body-wrapper {
+	height: calc(100% - 49px) !important;
+}
+
+.mat-tab-group {
+	height:100% !important;
+	overflow-y: hidden;
+}
+
+.mat-drawer-content{
+
+	overflow-y: hidden !important;
+
+}
+.mat-tab-body-content {
+  height: 100% !important ;
+  overflow: hidden !important;
+}
+
+hr{
+	width: calc(100% - 10px);
+	height: 2px;
+	background-color: #d9d8d8;
+	margin:30px;
+}
+.mat-tab-nav-bar, .mat-tab-header{
+  border-bottom:none !important;
+} 

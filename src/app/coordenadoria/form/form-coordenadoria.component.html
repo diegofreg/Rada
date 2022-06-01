@@ -1,0 +1,35 @@
+<h4>Cooedenadoria Regional</h4>
+    <mat-form-field appearance="fill">
+      <mat-label>Selecione</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let food of foods" [value]="food.value">
+          {{food.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <h4>Escritório Seccional</h4>
+    <mat-form-field appearance="fill">
+      <mat-label>Escritórios</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let diego of foods" [value]="diego.value">
+          {{diego.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <form class="example-form">
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>N Termo de Coleta</mat-label>
+        <textarea matInput placeholder="Numero Termo de coleta "></textarea>
+      </mat-form-field>
+    </form>
+    <section>
+      <div class="example-button-row">
+
+        <button mat-flat-button color="primary">Salvar</button>
+
+
+      </div>
+    </section>
